@@ -1,0 +1,304 @@
+@CHARSET "ISO-8859-1";
+
+body {
+
+
+
+  background: '#fafafa';
+
+
+
+  font-family: Arial, sans-serif;
+
+
+
+  line-height: 1.6;
+
+margin-top:5px;
+
+
+
+/*
+
+
+
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWnTq2EcY7DRZMTKgEP2kUjZO44lZIubA1DvLdY455QkVspAJZmg");
+
+
+
+  background-repeat: no-repeat;
+
+
+
+  background-size: cover; 
+
+
+
+*/
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+
+
+
+  padding-top:10px;
+
+  padding-bottom:10px;
+
+  padding-left:15px;
+
+  padding-right:15px;
+
+  background: #fff;
+
+/*  max-width: 360px;*/
+
+/*  border-radius: 20px;*/
+
+  margin: 10px auto;
+
+
+
+
+}
+
+
+
+
+
+
+.card:hover{
+
+
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.7);
+
+}
+
+
+
+
+
+
+
+
+
+
+.shadow1 { 
+
+
+
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.4);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.txt{
+
+
+
+  border-radius: 10px;
+
+max-width: 490px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.forme {
+
+
+
+  margin:0 auto;
+
+
+
+  width:300px
+
+
+
+}
+
+
+
+input {
+
+
+
+  margin-bottom:5px;
+
+
+
+  padding:10px;
+
+
+
+  width: 100%;
+
+
+
+  border:1px solid #CCC
+
+
+
+}
+
+
+
+button {
+
+
+
+ 
+
+
+
+  height:35px;
+
+
+
+  border-radius: 10px;
+
+
+
+  margin: 10px 80px;
+
+
+
+    cursor:default;
+
+   padding-bottom:2px;
+
+   width:150px;
+
+  
+
+
+
+}
+
+
+
+label {
+
+
+
+  cursor:pointer
+
+
+
+}
+
+.imgcontainer {
+
+  text-align: center;
+
+  margin: 24px 0 12px 0;
+
+}
+
+
+
+.person {
+
+  width: 40%;
+
+  border-radius: 50%;
+height:50%;
+
+}
+
+
+
+.myButton {
+
+	background-color:transparent;
+
+	border-radius:28px;
+
+	border:1px solid #D34B2E;
+
+	display:inline-block;
+
+	cursor:pointer;
+
+	color:#050405;
+
+	font-family:Arial;
+
+	font-size:18px;
+
+	
+
+}
+
+
+
+.myButton:hover {
+
+  background-color: #D34B2E; 
+
+  color: white;
+
+}
+
+
+
+
+
+
+
+#register-form {
+
+
+
+  display:block;
+
+margin-bottom:5px;
+
+    margin-left: 50px;
+
+    margin-right: 50px;
+
+    width: 500px;
+
+
+
+}
