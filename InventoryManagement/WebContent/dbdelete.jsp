@@ -22,16 +22,16 @@ try {
 	connection = DriverManager.getConnection(connectionURL, "root",
 			"sql1");
 	String id = request.getParameter("id");    
-	String com = request.getParameter("company");
+	
 	int i=0;
 	
 	
 	    PreparedStatement ps=connection.prepareStatement(  
-	    	    "select * from devices where   id=? and comapany=?",  ResultSet.TYPE_SCROLL_SENSITIVE,
+	    	    "select * from devices where   id=? ",  ResultSet.TYPE_SCROLL_SENSITIVE,
 	              ResultSet.CONCUR_UPDATABLE);  
 	    	  
 	    	ps.setString(1,id);  
-	    	ps.setString(2,com);  
+	    	
 	    	              
 	    	ResultSet rs=ps.executeQuery();  
 
@@ -39,7 +39,7 @@ try {
 	    		   rs.deleteRow();
 	    		   i++;
 	    	 }
-	    	if(i>0) response.sendRedirect("alldevices.jsp");
+	    	if(i>0) response.sendRedirect("http://localhost:8080/InventoryManagement/alldevices");
 
 } catch (Exception ex) {
 	out.println(ex);

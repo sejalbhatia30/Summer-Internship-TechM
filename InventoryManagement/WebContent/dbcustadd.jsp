@@ -13,7 +13,7 @@
 <% if(session.getAttribute("loggedin")=="no") 
 
 {
-	response.sendRedirect("adminlogin.jsp");
+	response.sendRedirect("http://localhost:8080/InventoryManagement/login");
 }
 
 %>
@@ -58,7 +58,7 @@ try {
 	if (i > 0 ) {
 		int j = st2.executeUpdate();
 		if (j>0)
-	    response.sendRedirect("custall.jsp");
+	    response.sendRedirect("http://localhost:8080/InventoryManagement/all");
 	 
 	} else {
 		 out.println(id);

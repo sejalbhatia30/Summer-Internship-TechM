@@ -23,9 +23,11 @@ try {
 			"sql1");
 	String id = request.getParameter("userid");    
 	String pass = request.getParameter("password");
-	
-	
-	
+	String url= request.getParameter("prevv");
+	String urli= request.getParameter("prevv").toString();
+	if(urli=="http://localhost:8080/InventoryManagement/login?prev=null"){
+		urli="http://localhost:8080/InventoryManagement/login";
+	}
 	    PreparedStatement ps=connection.prepareStatement(  
 	    	    "select * from employees where   id=?");  
 	    	  
@@ -41,13 +43,13 @@ try {
 	 	        session.setAttribute("username", name);
 	 	 
 	 	         session.setAttribute("loggedin","yes");
-	 	        response.sendRedirect("custprofile.jsp");
+	 	        response.sendRedirect(urli);
 	 	    	}
 	 	     else {
-	 	        out.println("Invalid credentials <a href='login.jsp'>try again</a>");
+	 	        out.println("Invalid credentials <a href='http://localhost:8080/InventoryManagement/login'>try again</a>");
 	 	    }
 	    	 }
-	    	 else out.println("Please Register first <a href='register.jsp'>try again</a>");
+	    	 else out.println("Please Register first <a href='http://localhost:8080/InventoryManagement/register'>try again</a>");
 	
 
 } catch (Exception ex) {

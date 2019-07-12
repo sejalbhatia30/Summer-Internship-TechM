@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-     <%@page import="java.sql.*" %>
+     <%@page import="java.sql.*" %> <%@page import="java.util.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,32 +22,30 @@ try {
 	connection = DriverManager.getConnection(connectionURL, "root",
 			"sql1");
 	String id = request.getParameter("userid");    
-	String pass = request.getParameter("password");
+	String pass = request.getParameter("pass");
+	String cpass = request.getParameter("cpass");
 	
-	
-	
+	if(pass.equals(cpass)){
 	    PreparedStatement ps=connection.prepareStatement(  
-	    	    "select * from admin where   id=?");  
-	    	  
-	    	ps.setString(1,id);  
+	    	    "update employees set password=? where id =?");  
+		ps.setString(1,pass);   
+	    	ps.setString(2,id);  
 	     
 	    	              
-	    	ResultSet rs=ps.executeQuery();  
+	    	int i=ps.executeUpdate();
 
-	    	 if (rs.next()) {
-	 	    	String name=rs.getString("id");
-	 	    	String p=rs.getString("password");
-	 	    	if(p.equals(pass)){
-	 	       session.setAttribute("adlogin","yes");
-	 	        response.sendRedirect("http://localhost:8080/InventoryManagement/alldevices");
+	    	 if (i>0) {
+	 	    	
+	 	        session.setAttribute("fp", "true");
+	 	 
 	 	        
+	 	        response.sendRedirect("http://localhost:8080/InventoryManagement/login");
 	 	    	}
 	 	     else {
-	 	    	 out.println(p);
-	 	        out.println("Invalid credentials <a href='http://localhost:8080/InventoryManagement/adminlogin'>try again</a>");
+	 	        out.println("Invalid ID <a href='register.jsp'>Register </a>");
 	 	    }
 	    	 }
-	    	 else out.println("Access denied !");
+	    	 else out.println("Passwords doesn't match ! <a href='http://localhost:8080/InventoryManagement/forgot'>try again</a>");
 	
 
 } catch (Exception ex) {

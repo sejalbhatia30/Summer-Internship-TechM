@@ -66,7 +66,7 @@ session.setAttribute("loggedin","no");
 
  <label style="margin-right: 10px; padding-top:15px;">Already registered ? </label>
 
-<form method="get" action="login.jsp">
+<form method="get" action="http://localhost:8080/InventoryManagement/login">
 
 <button  type="submit" class="myButton" style="width: 100px; padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px;margin-top:7px;">Login</button>
 

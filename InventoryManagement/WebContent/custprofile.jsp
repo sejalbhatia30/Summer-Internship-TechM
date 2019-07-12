@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<title>Insert title here</title>
+<title>Profile</title>
 <style>
         .center{
             text-align:center;
@@ -48,7 +48,7 @@
 <% if(session.getAttribute("loggedin")=="no") 
 
 {
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("http://localhost:8080/InventoryManagement/login?prev="+request.getRequestURL()+"");
 }
 
 %>

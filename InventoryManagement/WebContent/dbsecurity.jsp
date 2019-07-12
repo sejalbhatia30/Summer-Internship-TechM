@@ -21,30 +21,27 @@ try {
 
 	connection = DriverManager.getConnection(connectionURL, "root",
 			"sql1");
-	String user = request.getParameter("user");    
-	String pass = request.getParameter("password");
-	String id = request.getParameter("id");
-	String email = request.getParameter("email");
-	String loc = request.getParameter("loc");
+	String a1 = request.getParameter("q1");    
+	String a2 = request.getParameter("q2");
 	
 	
+	
+	 String to;
+		to=(String)session.getAttribute("userid");     
 
 
-	PreparedStatement st = connection.prepareStatement("insert into employees (name,email,password,id,location) values (?,?,?,?,?)");
-	st.setString(1, user);
-	st.setString(4, id);
-	st.setString(2, email);
-	st.setString(3, pass);
-	st.setString(5, loc);
+	PreparedStatement st = connection.prepareStatement("update employees set a1=? , a2=? where id=?");
+	st.setString(1, a1);
+	st.setString(2, a2);
+	st.setString(3, to);
 	int i=st.executeUpdate();
 	if (i > 0) {
-	    session.setAttribute("username", user);
-	    session.setAttribute("userid", id);
+	  
 	     
-	    response.sendRedirect("http://localhost:8080/InventoryManagement/security");
+	    response.sendRedirect("http://localhost:8080/InventoryManagement/login");
 	 
 	} else {
-	    response.sendRedirect("http://localhost:8080/InventoryManagement/register");
+		out.println(to);
 	}	
 
 	

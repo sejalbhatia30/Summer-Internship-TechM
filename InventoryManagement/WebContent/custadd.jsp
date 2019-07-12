@@ -32,7 +32,7 @@
 <% if(session.getAttribute("loggedin")=="no") 
 
 {
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("http://localhost:8080/InventoryManagement/login?prev="+request.getRequestURL()+"");
 }
 
 %>
@@ -65,7 +65,7 @@
 
     <label for="favcity">
     <select id="favcity" name="select">
-     <option value="0">Choose Device</option>
+     <option  disabled selected hidden>Choose Device</option>
     <%
 
 try {

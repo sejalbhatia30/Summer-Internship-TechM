@@ -15,24 +15,22 @@
 <% if(session.getAttribute("adlogin")=="no") 
 
 {
-	response.sendRedirect("adminlogin.jsp");
-}
+	response.sendRedirect("http://localhost:8080/InventoryManagement/adminlogin");}
 
 %>
 
 <%@include file="headeradmin.jsp" %>
-
-<form method="get" action="delete.jsp" style="text-align:center;float:right;margin:10px;">
+<form method="get" action="http://localhost:8080/InventoryManagement/delmul" style="text-align:center;float:right;margin:10px;">
 
 <button  type="submit" class=" btn btn-secondary  btn-lg" >Delete Device</button>
 
 </form>
-<form method="get" action="track.jsp" style="text-align:center;float:right;margin:10px;">
+<form method="get" action="http://localhost:8080/InventoryManagement/track" style="text-align:center;float:right;margin:10px;">
 
 <button  type="submit" class=" btn btn-secondary  btn-lg" >Track Records</button>
 
 </form>
-<form method="get" action="adddevice.jsp" style="text-align:right;margin:10px;">
+<form method="get" action="http://localhost:8080/InventoryManagement/add" style="text-align:right;margin:10px;">
 
 <button  type="submit" class=" btn btn-secondary btn-lg" >Add Device</button>
 
@@ -44,7 +42,7 @@
   
   <thead>
     <tr>
-            <th class="ttitle" colspan="7">
+            <th class="ttitle" colspan="8">
                 <h2>Tech Mahindra Inventory</h2>
             </th>
         </tr>
@@ -57,7 +55,7 @@
             <th>Issued Status</th>
              <th>Issued to</th>
              <th>Date of Issue</th>
-           
+            <th>Remove</th>
     </tr>
   </thead>
   
@@ -110,6 +108,7 @@ try {
       <td data-label="Issued Status"><%=status %></td>
       <td data-label="Issued To"><%=to %></td>
      <td data-label="Date of Issue"><%=date %></td>
+     <td data-label="Remove"><a href="dbdelete.jsp?id=<%=id %>" ><img src="https://cdn4.iconfinder.com/data/icons/gradient-ui-1/512/error-256.png" href="alldevices.jsp"style="height:20px; width:20px;"></a></td>
     </tr>
    
   </tbody>

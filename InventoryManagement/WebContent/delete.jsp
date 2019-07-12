@@ -28,6 +28,13 @@
 </style>
 </head>
 <body>
+<% if(session.getAttribute("adlogin")=="no") 
+
+{
+	response.sendRedirect("http://localhost:8080/InventoryManagement/adminlogin");
+}
+
+%>
 <%@include file="header.jsp" %>
  
 
@@ -51,7 +58,7 @@
 </div>
 <div>
 
-<form action="dbdelete.jsp" method="post" >
+<form action="dbdqelete.jsp" method="post" >
 
 <div class="row">
   <div class="col-5"><div class="form-group">

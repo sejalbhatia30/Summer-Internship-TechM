@@ -7,13 +7,16 @@
 <title>TechM IMS | Login</title>
 <link rel="stylesheet" href="static/login.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <% if(session.getAttribute("loggedin")=="yes") 
 
 {
-	response.sendRedirect("custadd.jsp");
+	response.sendRedirect("http://localhost:8080/InventoryManagement/profile");
 }
 
 %>
@@ -27,7 +30,13 @@ if(session.getAttribute("loggedin")=="no")
 
 
         <%@include file="header.jsp" %>
-       
+        
+ <% if(session.getAttribute("fp")=="true"){
+	out.println("<div class='alert alert-danger alert-dismissible fade show' role='alert'>  <strong>Password Changed!</strong> You can now login using new password  .  <button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button></div>");
+	 session.setAttribute("fp", null);
+	 
+ } %>
+ 
  
 
 <div class="card shadow1 bg-light " style=" margin-top: 50px;max-width: 590px;padding:7px;">
@@ -38,7 +47,7 @@ if(session.getAttribute("loggedin")=="no")
 
 
 
-<form id='register-form' action="dblogin.jsp" method='post' class="forme">
+<form id='register-form' action="dblogin.jsp?prevv=<%=request.getParameter("prev") %>" method='post' class="forme">
 
 <div class="imgcontainer">
 
@@ -64,6 +73,7 @@ if(session.getAttribute("loggedin")=="no")
 
 
   <button type='submit' class="myButton" style="margin-left: 150px;">Login</button>
+  <a href="http://localhost:8080/InventoryManagement/fsec" style="color:red;margin-left:10px;">Forgot password?</a>
 
 
 
@@ -73,7 +83,7 @@ if(session.getAttribute("loggedin")=="no")
 
  <label style="margin-right: 10px; padding-top:15px;">New User ? </label>
 
-<form method="post" action="register.jsp">
+<form method="post" action="http://localhost:8080/InventoryManagement/register">
 
 <button  type="submit" class="myButton" style="width: 100px; padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px;margin-top:7px;">Register</button>
 

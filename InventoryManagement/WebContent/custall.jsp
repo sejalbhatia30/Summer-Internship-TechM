@@ -15,7 +15,7 @@
 <% if(session.getAttribute("loggedin")=="no") 
 
 {
-	response.sendRedirect("adminlogin.jsp");
+	response.sendRedirect("http://localhost:8080/InventoryManagement/login?prev="+request.getRequestURL()+"");
 }
 
 %>
@@ -40,7 +40,7 @@
             <th>Location</th>
          
              <th>Date of Issue</th>
-             <th>Remove</th>
+             <th>Submit</th>
            
     </tr>
   </thead>
@@ -95,7 +95,7 @@ try {
       <td data-label="Location"><%=location %></td>
      <td data-label="Date of Issue"><%=date %></td>
    
-     <td data-label="Remove"><a href="custdel.jsp?id=<%=id %>" ><img src="https://cdn4.iconfinder.com/data/icons/gradient-ui-1/512/error-256.png" href="alldevices.jsp"style="height:20px; width:20px;"></a></td>
+     <td data-label="Submit"><a href="custdel.jsp?id=<%=id %>" ><img src="https://cdn4.iconfinder.com/data/icons/gradient-ui-1/512/error-256.png" href="alldevices.jsp"style="height:20px; width:20px;"></a></td>
     </tr>
    
   </tbody>

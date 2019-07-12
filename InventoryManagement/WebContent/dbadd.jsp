@@ -44,7 +44,7 @@ try {
 
 	if (i > 0) {
 	    
-	    response.sendRedirect("alldevices.jsp");
+	    response.sendRedirect("http://localhost:8080/InventoryManagement/all");
 	 
 	} else {
 	    response.sendRedirect("error.jsp");

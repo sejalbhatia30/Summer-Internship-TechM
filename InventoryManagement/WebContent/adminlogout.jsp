@@ -12,7 +12,7 @@
 
 session.setAttribute("adlogin","no");
 
-response.sendRedirect("adminlogin.jsp");
+response.sendRedirect("http://localhost:8080/InventoryManagement/adminlogin");
 %>
 
 

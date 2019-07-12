@@ -12,7 +12,7 @@
 session.setAttribute("username","TechM Employee");
 session.setAttribute("loggedin","no");
 session.setAttribute("issued", "0");
-response.sendRedirect("login.jsp");
+response.sendRedirect("http://localhost:8080/InventoryManagement/login?prev=http://localhost:8080/InventoryManagement/login");
 %>
 
 

@@ -15,7 +15,7 @@
 <% if(session.getAttribute("loggedin")=="no") 
 
 {
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("http://localhost:8080/InventoryManagement/login?prev="+request.getRequestURL()+"");
 }
 
 %>

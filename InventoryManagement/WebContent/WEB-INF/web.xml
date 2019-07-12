@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>InventoryManagement</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+<servlet>   
+  <servlet-name>InventoryManagement</servlet-name>
+  <jsp-file>/login.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagement</servlet-name>
+  <url-pattern>/login/*</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementq</servlet-name>
+  <jsp-file>/register.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementq</servlet-name>
+  <url-pattern>/register</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementr</servlet-name>
+  <jsp-file>/custprofile.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementr</servlet-name>
+  <url-pattern>/profile</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagements</servlet-name>
+  <jsp-file>/custadd.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagements</servlet-name>
+  <url-pattern>/choose-device</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementt</servlet-name>
+  <jsp-file>/custall.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementt</servlet-name>
+  <url-pattern>/all</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementu</servlet-name>
+  <jsp-file>/custav.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementu</servlet-name>
+  <url-pattern>/available</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementv</servlet-name>
+  <jsp-file>/adminlogin.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementv</servlet-name>
+  <url-pattern>/adminlogin</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementw</servlet-name>
+  <jsp-file>/alldevices.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementw</servlet-name>
+  <url-pattern>/alldevices</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementx</servlet-name>
+  <jsp-file>/adddevice.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementx</servlet-name>
+  <url-pattern>/add</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementy</servlet-name>
+  <jsp-file>/track.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementy</servlet-name>
+  <url-pattern>/track</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementz</servlet-name>
+  <jsp-file>/delete.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementz</servlet-name>
+  <url-pattern>/delete</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementa</servlet-name>
+  <jsp-file>/fsec.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementa</servlet-name>
+  <url-pattern>/fsec</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementb</servlet-name>
+  <jsp-file>/forgot.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementb</servlet-name>
+  <url-pattern>/forgot</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>InventoryManagementc</servlet-name>
+  <jsp-file>/security.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>InventoryManagementc</servlet-name>
+  <url-pattern>/security</url-pattern>
+</servlet-mapping>
+
+</web-app>
