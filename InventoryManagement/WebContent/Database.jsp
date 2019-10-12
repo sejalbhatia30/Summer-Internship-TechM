@@ -10,6 +10,7 @@
 <body>
 <%
 try {
+
 	out.println(session.getAttribute("issued"));
 	
 	String connectionURL = "jdbc:mysql://localhost:3306/ims";
